@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vrindavan Dham Boys Hostel & PG - Comfortable, Safe & Affordable Student Living. Fully furnished rooms with WiFi, food, security, and all amenities.">
+<meta name="keywords" content="boys hostel, PG accommodation, student hostel, boys PG, hostel Vrindavan">
+<title>Vrindavan Dham Boys Hostel & P.G | Premium Student Living</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8CC7A;
+    --gold-dark: #A07830;
+    --blue: #1A4A7A;
+    --blue-light: #2B6CB0;
+    --blue-pale: #EBF4FF;
+    --white: #FFFFFF;
+    --off-white: #F8FAFF;
+    --text-dark: #1A2333;
+    --text-mid: #4A5568;
+    --text-light: #718096;
+    --shadow-sm: 0 2px 12px rgba(26,74,122,0.08);
+    --shadow-md: 0 8px 32px rgba(26,74,122,0.14);
+    --shadow-lg: 0 20px 60px rgba(26,74,122,0.18);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 40px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    box-shadow: 0 2px 24px rgba(26,74,122,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--gold);
+    box-shadow: 0 4px 12px rgba(26,74,122,0.3);
+  }
+
+  .nav-logo-text {
+    line-height: 1.1;
+  }
+
+  .nav-logo-text span:first-child {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-weight: 700;
+    color: var(--blue);
+    letter-spacing: 0.3px;
+  }
+
+  .nav-logo-text span:last-child {
+    font-size: 10px; font-weight: 500;
+    color: var(--gold-dark);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 6px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 14px; font-weight: 500;
+    color: var(--text-mid);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.25s;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-links a:hover { color: var(--blue); background: var(--blue-pale); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+    color: white !important;
+    padding: 9px 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(201,168,76,0.35);
+  }
+
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.45) !important; background: var(--blue-pale) !important; }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 8px; background: none; border: none;
+  }
+
+  .hamburger span {
+    width: 24px; height: 2px;
+    background: var(--blue); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none; position: fixed; top: 72px; left: 0; right: 0;
+    background: white; z-index: 999; padding: 16px;
+    box-shadow: var(--shadow-md);
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .mobile-menu.open { display: block; }
+  .mobile-menu a { display: block; padding: 12px 16px; text-decoration: none; color: var(--text-dark); font-size: 15px; border-radius: 8px; }
+  .mobile-menu a:hover { background: var(--blue-pale); color: var(--blue); }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative; height: 100vh; min-height: 600px;
+    overflow: hidden; margin-top: 0;
+  }
+
+  .hero-slides {
+    position: absolute; inset: 0;
+    display: flex; transition: transform 0.9s cubic-bezier(0.77,0,0.175,1);
+  }
+
+  .hero-slide {
+    min-width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    position: relative;
+  }
+
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg,
+      rgba(10,25,50,0.78) 0%,
+      rgba(26,74,122,0.55) 50%,
+      rgba(10,25,50,0.72) 100%);
+  }
+
+  .hero-content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 20px 40px;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.5);
+    backdrop-filter: blur(10px);
+    color: var(--gold-light); font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 8px 20px; border-radius: 50px;
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 300; line-height: 1.15;
+    color: white; letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    animation: fadeUp 0.8s ease 0.4s both;
+  }
+
+  .hero-title em {
+    font-style: italic; color: var(--gold-light);
+    font-weight: 400;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(14px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.75); font-weight: 300;
+    letter-spacing: 0.5px; margin-bottom: 40px;
+    max-width: 540px;
+    animation: fadeUp 0.8s ease 0.55s both;
+  }
+
+  .hero-buttons {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    animation: fadeUp 0.8s ease 0.7s both;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), #A07830);
+    color: white; border: none;
+    padding: 15px 36px; border-radius: 50px;
+    font-size: 15px; font-weight: 600;
+    cursor: pointer; text-decoration: none; display: inline-block;
+    box-shadow: 0 8px 28px rgba(201,168,76,0.45);
+    transition: all 0.3s ease; letter-spacing: 0.5px;
+  }
+
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(201,168,76,0.55); }
+
+  .btn-outline {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    color: white; border: 1.5px solid rgba(255,255,255,0.4);
+    padding: 14px 34px; border-radius: 50px;
+    font-size: 15px; font-weight: 500;
+    cursor: pointer; text-decoration: none; display: inline-block;
+    transition: all 0.3s ease; letter-spacing: 0.5px;
+  }
+
+  .btn-outline:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.7); transform: translateY(-3px); }
+
+  /* Slider dots */
+  .hero-dots {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 5;
+  }
+
+  .hero-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.4); cursor: pointer;
+    transition: all 0.3s; border: none;
+  }
+
+  .hero-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+
+  .hero-arrows {
+    position: absolute; bottom: 28px; right: 40px;
+    display: flex; gap: 10px; z-index: 5;
+  }
+
+  .hero-arrow {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; transition: all 0.25s;
+  }
+
+  .hero-arrow:hover { background: var(--gold); border-color: var(--gold); }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute; bottom: 32px; left: 40px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    z-index: 5;
+    animation: fadeUp 1s ease 1.2s both;
+  }
+
+  .scroll-indicator span {
+    font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.5);
+    text-transform: uppercase; writing-mode: vertical-rl;
+  }
+
+  .scroll-line {
+    width: 1px; height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse { 0%,100%{opacity:1;transform:scaleY(1)} 50%{opacity:0.4;transform:scaleY(0.6)} }
+
+  /* ===== SECTION SHARED ===== */
+  section { padding: 90px 0; }
+
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
+
+  .section-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold-dark);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 600; line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 16px; color: var(--text-mid); font-weight: 300;
+    line-height: 1.7; max-width: 580px;
+  }
+
+  .gold-line {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px; margin: 16px 0 24px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 70px; align-items: center;
+  }
+
+  .about-image-wrap {
+    position: relative;
+  }
+
+  .about-main-img {
+    width: 100%; height: 440px;
+    object-fit: cover; border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    display: block;
+  }
+
+  .about-badge-img {
+    position: absolute; bottom: -28px; right: -28px;
+    width: 160px; height: 160px;
+    object-fit: cover; border-radius: var(--radius);
+    border: 5px solid white;
+    box-shadow: var(--shadow-md);
+  }
+
+  .about-tag {
+    position: absolute; top: 24px; left: 24px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: white; padding: 12px 20px;
+    border-radius: 12px; text-align: center;
+    box-shadow: 0 8px 24px rgba(201,168,76,0.4);
+  }
+
+  .about-tag strong { display: block; font-size: 26px; font-weight: 700; }
+  .about-tag span { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; margin-top: 32px;
+  }
+
+  .about-stat {
+    background: white; border-radius: 12px; padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--gold);
+  }
+
+  .about-stat strong { display: block; font-size: 24px; font-weight: 700; color: var(--blue); }
+  .about-stat span { font-size: 13px; color: var(--text-mid); font-weight: 400; }
+
+  /* ===== FACILITIES ===== */
+  .facilities { background: white; }
+
+  .facilities-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 48px;
+  }
+
+  .facility-card {
+    background: var(--off-white);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.3s ease;
+    position: relative; overflow: hidden;
+  }
+
+  .facility-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .facility-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); background: white; }
+  .facility-card:hover::before { transform: scaleX(1); }
+
+  .facility-icon {
+    width: 68px; height: 68px; margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--blue-pale), rgba(43,108,176,0.1));
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; color: var(--blue);
+    transition: all 0.3s;
+  }
+
+  .facility-card:hover .facility-icon {
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    color: white;
+    box-shadow: 0 8px 20px rgba(26,74,122,0.3);
+  }
+
+  .facility-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
+  .facility-card p { font-size: 14px; color: var(--text-mid); line-height: 1.6; font-weight: 300; }
+
+  /* ===== GALLERY ===== */
+  .gallery { background: var(--off-white); }
+
+  .gallery-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative; cursor: pointer;
+  }
+
+  .gallery-item:nth-child(1) { grid-column: 1/3; grid-row: 1; }
+  .gallery-item:nth-child(5) { grid-column: 3/5; grid-row: 2; }
+
+  .gallery-item img {
+    width: 100%; height: 240px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+
+  .gallery-item:nth-child(1) img,
+  .gallery-item:nth-child(5) img { height: 280px; }
+
+  .gallery-item:hover img { transform: scale(1.08); }
+
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,74,122,0.7), transparent);
+    opacity: 0; transition: opacity 0.35s;
+    display: flex; align-items: flex-end; padding: 20px;
+  }
+
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-overlay span {
+    color: white; font-size: 14px; font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== ROOMS ===== */
+  .rooms { background: white; }
+
+  .rooms-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 28px; margin-top: 48px;
+  }
+
+  .room-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(26,74,122,0.08);
+    transition: all 0.35s ease;
+    background: white;
+  }
+
+  .room-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+
+  .room-card.featured {
+    border: 2px solid var(--gold);
+    position: relative;
+  }
+
+  .room-badge {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--gold); color: white;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
+  }
+
+  .room-img {
+    width: 100%; height: 220px; object-fit: cover;
+    display: block;
+  }
+
+  .room-body { padding: 28px; }
+
+  .room-type {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600; color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .room-capacity {
+    font-size: 13px; color: var(--text-mid); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .room-capacity i { color: var(--gold); }
+
+  .room-features { list-style: none; margin-bottom: 24px; }
+
+  .room-features li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; color: var(--text-mid); padding: 5px 0;
+  }
+
+  .room-features li i { color: var(--gold); font-size: 12px; }
+
+  .room-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .room-price strong {
+    font-size: 26px; font-weight: 700; color: var(--blue);
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .room-price span { font-size: 12px; color: var(--text-light); display: block; }
+
+  .btn-sm {
+    background: var(--blue); color: white;
+    padding: 10px 22px; border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: all 0.25s;
+    display: inline-block;
+  }
+
+  .btn-sm:hover { background: var(--blue-light); transform: translateY(-2px); }
+  .room-card.featured .btn-sm { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials { background: linear-gradient(135deg, var(--blue) 0%, #0D2F55 100%); }
+
+  .testimonials .section-label { color: var(--gold-light); }
+  .testimonials .section-title { color: white; }
+  .testimonials .gold-line { background: linear-gradient(90deg, var(--gold-light), var(--gold)); }
+
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 48px;
+  }
+
+  .testimonial-card {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 32px; transition: all 0.3s;
+  }
+
+  .testimonial-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+
+  .t-stars { color: var(--gold-light); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+
+  .t-quote {
+    font-size: 15px; color: rgba(255,255,255,0.85);
+    line-height: 1.75; font-style: italic; font-weight: 300;
+    margin-bottom: 24px; font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+  }
+
+  .t-author { display: flex; align-items: center; gap: 14px; }
+
+  .t-avatar {
+    width: 46px; height: 46px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--blue-light));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: white;
+    flex-shrink: 0;
+  }
+
+  .t-author-info strong { display: block; color: white; font-size: 14px; font-weight: 600; }
+  .t-author-info span { color: rgba(255,255,255,0.5); font-size: 12px; }
+
+  /* ===== CONTACT ===== */
+  .contact { background: var(--off-white); }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 64px; align-items: start; margin-top: 48px;
+  }
+
+  .contact-info-item {
+    display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px;
+  }
+
+  .contact-info-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: white; border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--blue);
+  }
+
+  .contact-info-item h4 { font-size: 13px; color: var(--text-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .contact-info-item p, .contact-info-item a { font-size: 16px; color: var(--text-dark); font-weight: 500; text-decoration: none; }
+  .contact-info-item a:hover { color: var(--blue); }
+
+  .contact-map {
+    background: linear-gradient(135deg, var(--blue-pale), rgba(43,108,176,0.1));
+    border-radius: var(--radius); height: 180px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-mid); font-size: 14px; margin-top: 24px;
+    border: 1px dashed rgba(26,74,122,0.2);
+  }
+
+  .contact-form {
+    background: white; border-radius: var(--radius);
+    padding: 44px; box-shadow: var(--shadow-md);
+  }
+
+  .form-group { margin-bottom: 20px; }
+
+  .form-group label {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--text-dark); margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; padding: 14px 18px;
+    border: 1.5px solid rgba(26,74,122,0.15);
+    border-radius: 10px; font-size: 15px; font-family: 'Jost', sans-serif;
+    color: var(--text-dark); background: var(--off-white);
+    transition: all 0.25s; outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue); background: white;
+    box-shadow: 0 0 0 3px rgba(26,74,122,0.08);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .btn-submit {
+    width: 100%; padding: 16px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    color: white; border: none; border-radius: 10px;
+    font-size: 16px; font-weight: 600; font-family: 'Jost', sans-serif;
+    cursor: pointer; letter-spacing: 0.5px;
+    transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;
+    box-shadow: 0 8px 24px rgba(26,74,122,0.3);
+  }
+
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(26,74,122,0.4); }
+
+  .whatsapp-note {
+    text-align: center; margin-top: 14px;
+    font-size: 13px; color: var(--text-light);
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+
+  .whatsapp-note i { color: #25D366; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(135deg, #0D1F3C 0%, #1A2F50 100%);
+    color: rgba(255,255,255,0.7); padding: 70px 0 30px;
+  }
+
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 48px; margin-bottom: 48px;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; color: white; font-weight: 600; margin-bottom: 6px;
+  }
+
+  .footer-brand span {
+    font-size: 11px; color: var(--gold); letter-spacing: 2px;
+    text-transform: uppercase; display: block; margin-bottom: 16px;
+  }
+
+  .footer-brand p { font-size: 14px; line-height: 1.7; font-weight: 300; max-width: 280px; }
+
+  .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+
+  .social-icon {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; color: rgba(255,255,255,0.6);
+    text-decoration: none; transition: all 0.25s;
+  }
+
+  .social-icon:hover { background: var(--gold); color: white; border-color: var(--gold); transform: translateY(-2px); }
+
+  .footer-col h4 {
+    font-size: 12px; font-weight: 700; color: white;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;
+    padding-bottom: 12px; border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li { margin-bottom: 10px; }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px;
+    transition: color 0.2s; display: flex; align-items: center; gap: 8px;
+    font-weight: 300;
+  }
+
+  .footer-col ul li a::before { content: '›'; color: var(--gold); }
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-contact-item {
+    display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;
+  }
+
+  .footer-contact-item i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+  .footer-contact-item span { font-size: 14px; font-weight: 300; line-height: 1.5; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px; text-align: center;
+    font-size: 13px; color: rgba(255,255,255,0.35);
+  }
+
+  .footer-bottom span { color: var(--gold); }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; color: white;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+    text-decoration: none;
+    animation: pulse 2.5s infinite;
+    transition: transform 0.25s;
+  }
+
+  .whatsapp-float:hover { transform: scale(1.12); }
+
+  @keyframes pulse {
+    0%,100%{ box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+    50%{ box-shadow: 0 6px 36px rgba(37,211,102,0.7); }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+    .rooms-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item:nth-child(1), .gallery-item:nth-child(5) { grid-column: auto; grid-row: auto; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  @media(max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .container { padding: 0 20px; }
+    section { padding: 64px 0; }
+    .facilities-grid { grid-template-columns: 1fr 1fr; }
+    .rooms-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .gallery-item:nth-child(1) img, .gallery-item:nth-child(5) img { height: 200px; }
+    .gallery-item img { height: 180px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-badge-img { display: none; }
+    .hero-arrows { display: none; }
+    .scroll-indicator { display: none; }
+  }
+
+  @media(max-width: 480px) {
+    .facilities-grid { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon"><i class="fas fa-home"></i></div>
+    <div class="nav-logo-text">
+      <span>Vrindavan Dham</span>
+      <span>Boys Hostel & P.G</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#facilities" onclick="closeMobile()">Facilities</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#rooms" onclick="closeMobile()">Rooms</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#contact" onclick="closeMobile()" style="color:var(--blue);font-weight:600;">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroSlides">
+    <!-- Slide 1 -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1600&q=80')">
+      <div class="hero-overlay"></div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&q=80')">
+      <div class="hero-overlay"></div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=80')">
+      <div class="hero-overlay"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-star"></i> Premium Student Accommodation</div>
+    <h1 class="hero-title">Comfortable &amp; <em>Safe Living</em><br>for Students</h1>
+    <p class="hero-subtitle">Vrindavan Dham Boys Hostel &amp; P.G — Your home away from home, designed for focused minds and peaceful living.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> &nbsp;Book Now</a>
+      <a href="tel:9425430025" class="btn-outline"><i class="fas fa-phone"></i> &nbsp;Contact Us</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-i="0"></button>
+    <button class="hero-dot" data-i="1"></button>
+    <button class="hero-dot" data-i="2"></button>
+  </div>
+
+  <div class="hero-arrows">
+    <button class="hero-arrow" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-arrow" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap fade-in">
+        <img class="about-main-img"
+          src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
+          alt="Hostel interior" loading="lazy">
+        <div class="about-tag">
+          <strong>5+</strong>
+          <span>Years of Trust</span>
+        </div>
+        <img class="about-badge-img"
+          src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80"
+          alt="Room view" loading="lazy">
+      </div>
+      <div class="fade-in">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">A Hostel Built Around Student Success</h2>
+        <div class="gold-line"></div>
+        <p class="section-sub">At Vrindavan Dham Boys Hostel &amp; P.G, we believe students deserve more than just a room — they deserve a thriving environment. Our hostel blends comfort, safety, and community, allowing students to focus on what truly matters: their education and growth.</p>
+        <br>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.75;font-weight:300;">From nutritious meals to round-the-clock security, every detail has been thoughtfully curated for modern student needs. Affordable pricing without compromise on quality — that's the Vrindavan Dham promise.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <strong>200+</strong>
+            <span>Happy Students</span>
+          </div>
+          <div class="about-stat">
+            <strong>24/7</strong>
+            <span>Security & Support</span>
+          </div>
+          <div class="about-stat">
+            <strong>100%</strong>
+            <span>Safe Environment</span>
+          </div>
+          <div class="about-stat">
+            <strong>3</strong>
+            <span>Meals Daily</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="facilities" id="facilities">
+  <div class="container">
+    <div style="text-align:center">
+      <p class="section-label fade-in">What We Offer</p>
+      <h2 class="section-title fade-in">World-Class Facilities</h2>
+      <div class="gold-line fade-in" style="margin:16px auto 8px"></div>
+      <p class="section-sub fade-in" style="margin:0 auto;text-align:center">Everything a student needs for a comfortable, productive, and stress-free stay.</p>
+    </div>
+    <div class="facilities-grid">
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-wifi"></i></div>
+        <h3>High-Speed WiFi</h3>
+        <p>Unlimited high-speed internet access throughout the premises — perfect for studies, online classes, and research.</p>
+      </div>
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-bed"></i></div>
+        <h3>Fully Furnished Rooms</h3>
+        <p>Comfortable beds, study table, wardrobe, and adequate lighting — everything furnished and move-in ready.</p>
+      </div>
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>24/7 Security</h3>
+        <p>Round-the-clock CCTV surveillance, biometric entry, and trained security staff to ensure your complete safety.</p>
+      </div>
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Healthy Food</h3>
+        <p>Nutritious home-cooked meals served thrice daily — breakfast, lunch, and dinner with a balanced diet.</p>
+      </div>
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-tshirt"></i></div>
+        <h3>Laundry Service</h3>
+        <p>Regular laundry facilities available on-premises, keeping your clothes clean without the hassle.</p>
+      </div>
+      <div class="facility-card fade-in">
+        <div class="facility-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Power Backup</h3>
+        <p>Uninterrupted power supply with generator backup — ensuring zero disruption to your studies anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <div>
+        <p class="section-label fade-in">Our Space</p>
+        <h2 class="section-title fade-in">See the Hostel</h2>
+        <div class="gold-line fade-in"></div>
+      </div>
+      <p class="section-sub fade-in" style="max-width:340px;text-align:right">Clean, modern, and designed for student life</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Hostel room" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Modern Rooms</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80" alt="Bedroom" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Cozy Bedroom</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80" alt="Living area" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Living Area</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80" alt="Study room" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Study Zone</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Kitchen area" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Dining Area</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&q=80" alt="Common area" loading="lazy">
+        <div class="gallery-overlay"><span><i class="fas fa-expand-alt"></i> &nbsp;Common Area</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+  <div class="container">
+    <div style="text-align:center">
+      <p class="section-label fade-in">Accommodation</p>
+      <h2 class="section-title fade-in">Choose Your Room</h2>
+      <div class="gold-line fade-in" style="margin:16px auto"></div>
+      <p class="section-sub fade-in" style="margin:0 auto;text-align:center">Flexible room options designed to suit every student's budget and preference.</p>
+    </div>
+    <div class="rooms-grid">
+      <!-- Single -->
+      <div class="room-card fade-in">
+        <img class="room-img"
+          src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80"
+          alt="Single room" loading="lazy">
+        <div class="room-body">
+          <h3 class="room-type">Single Occupancy</h3>
+          <p class="room-capacity"><i class="fas fa-user"></i> 1 Person | Private Room</p>
+          <ul class="room-features">
+            <li><i class="fas fa-check-circle"></i> Attached bathroom</li>
+            <li><i class="fas fa-check-circle"></i> Study table & wardrobe</li>
+            <li><i class="fas fa-check-circle"></i> AC / Non-AC available</li>
+            <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
+          </ul>
+          <div class="room-footer">
+            <div class="room-price">
+              <strong>₹5,500<small style="font-size:14px;font-weight:400">/mo</small></strong>
+              <span>All inclusive</span>
+            </div>
+            <a href="#contact" class="btn-sm">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <!-- Double -->
+      <div class="room-card featured fade-in">
+        <span class="room-badge">Most Popular</span>
+        <img class="room-img"
+          src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80"
+          alt="Double sharing room" loading="lazy">
+        <div class="room-body">
+          <h3 class="room-type">Double Sharing</h3>
+          <p class="room-capacity"><i class="fas fa-user-friends"></i> 2 Persons | Shared Room</p>
+          <ul class="room-features">
+            <li><i class="fas fa-check-circle"></i> Spacious shared bathroom</li>
+            <li><i class="fas fa-check-circle"></i> Individual study table</li>
+            <li><i class="fas fa-check-circle"></i> AC / Non-AC available</li>
+            <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
+          </ul>
+          <div class="room-footer">
+            <div class="room-price">
+              <strong>₹3,500<small style="font-size:14px;font-weight:400">/mo</small></strong>
+              <span>Per person</span>
+            </div>
+            <a href="#contact" class="btn-sm">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <!-- Triple -->
+      <div class="room-card fade-in">
+        <img class="room-img"
+          src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80"
+          alt="Triple sharing room" loading="lazy">
+        <div class="room-body">
+          <h3 class="room-type">Triple Sharing</h3>
+          <p class="room-capacity"><i class="fas fa-users"></i> 3 Persons | Budget Room</p>
+          <ul class="room-features">
+            <li><i class="fas fa-check-circle"></i> Shared bathroom</li>
+            <li><i class="fas fa-check-circle"></i> Individual study table</li>
+            <li><i class="fas fa-check-circle"></i> Non-AC room</li>
+            <li><i class="fas fa-check-circle"></i> High-speed WiFi</li>
+          </ul>
+          <div class="room-footer">
+            <div class="room-price">
+              <strong>₹2,500<small style="font-size:14px;font-weight:400">/mo</small></strong>
+              <span>Per person</span>
+            </div>
+            <a href="#contact" class="btn-sm">Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div style="text-align:center">
+      <p class="section-label fade-in">Student Voices</p>
+      <h2 class="section-title fade-in">What Residents Say</h2>
+      <div class="gold-line fade-in" style="margin:16px auto"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Staying at Vrindavan Dham has been a wonderful experience. The food is excellent, the rooms are clean, and I always feel safe. Best decision for my hostel stay!"</p>
+        <div class="t-author">
+          <div class="t-avatar">R</div>
+          <div class="t-author-info">
+            <strong>Rahul Sharma</strong>
+            <span>B.Tech Student, Indore</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"The WiFi speed is great for my online classes, and the management is very responsive. My parents are completely at ease knowing I'm here. Highly recommended!"</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div class="t-author-info">
+            <strong>Arjun Patel</strong>
+            <span>MBA Student, Indore</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Very affordable for the quality offered. The double room is spacious and well-furnished. I love the community feel here — made great friends during my preparation."</p>
+        <div class="t-author">
+          <div class="t-avatar">V</div>
+          <div class="t-author-info">
+            <strong>Vivek Mishra</strong>
+            <span>CA Aspirant, Indore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div style="text-align:center">
+      <p class="section-label fade-in">Get In Touch</p>
+      <h2 class="section-title fade-in">Book Your Stay Today</h2>
+      <div class="gold-line fade-in" style="margin:16px auto 0"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="fade-in">
+        <p style="font-size:16px;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:36px">Ready to join our hostel family? Fill in the form or reach us directly. We'll get back to you within the hour!</p>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <a href="tel:9425430025">+91 9425430025</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Location</h4>
+            <p>Vrindavan Dham Boys Hostel &amp; P.G, Indore, Madhya Pradesh</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <div style="text-align:center;color:var(--text-mid)">
+            <i class="fas fa-map-marked-alt" style="font-size:32px;color:var(--blue);display:block;margin-bottom:8px"></i>
+            Indore, Madhya Pradesh, India
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-in">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;margin-bottom:6px;color:var(--text-dark)">Send an Enquiry</h3>
+        <p style="font-size:14px;color:var(--text-light);margin-bottom:28px">We'll redirect you to WhatsApp to connect instantly</p>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="msg">Message</label>
+          <textarea id="msg" placeholder="Tell us about your requirements (room type, joining date, etc.)"></textarea>
+        </div>
+        <button class="btn-submit" onclick="sendWhatsApp()">
+          <i class="fab fa-whatsapp"></i> Send via WhatsApp
+        </button>
+        <p class="whatsapp-note"><i class="fab fa-whatsapp"></i> You'll be redirected to WhatsApp to continue the conversation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Vrindavan Dham</h3>
+        <span>Boys Hostel &amp; P.G</span>
+        <p>A safe, comfortable, and affordable home for students. Building futures, one room at a time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919425430025" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:9425430025" class="social-icon"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#rooms">Rooms &amp; Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Room Types</h4>
+        <ul>
+          <li><a href="#rooms">Single Occupancy</a></li>
+          <li><a href="#rooms">Double Sharing</a></li>
+          <li><a href="#rooms">Triple Sharing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span><a href="tel:9425430025" style="color:inherit;text-decoration:none">+91 9425430025</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <span><a href="https://wa.me/919425430025" style="color:inherit;text-decoration:none">WhatsApp Us</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Vrindavan Dham Boys Hostel &amp; P.G, Indore, M.P.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 <span>Vrindavan Dham Boys Hostel &amp; P.G</span> · All Rights Reserved · Made with <span>♥</span> for Students</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919425430025?text=Hello%2C%20I%20am%20interested%20in%20Vrindavan%20Dham%20Boys%20Hostel%20%26%20P.G.%20Please%20share%20details."
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  // ===== SLIDER =====
+  let current = 0;
+  const slides = document.getElementById('heroSlides');
+  const dots = document.querySelectorAll('.hero-dot');
+  const total = 3;
+
+  function goTo(n) {
+    current = (n + total) % total;
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d,i) => d.classList.toggle('active', i === current));
+  }
+
+  document.getElementById('nextSlide').onclick = () => goTo(current + 1);
+  document.getElementById('prevSlide').onclick = () => goTo(current - 1);
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.i)));
+  setInterval(() => goTo(current + 1), 5000);
+
+  // ===== MOBILE MENU =====
+  const ham = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  ham.onclick = () => menu.classList.toggle('open');
+  function closeMobile() { menu.classList.remove('open'); }
+
+  // ===== SCROLL ANIMATIONS =====
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ===== WHATSAPP FORM =====
+  function sendWhatsApp() {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const msg = document.getElementById('msg').value.trim();
+    if (!name) { alert('Please enter your name'); return; }
+    const text = `Hello, I am interested in Vrindavan Dham Boys Hostel & P.G. Please share details.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone || 'Not provided')}%0AMessage: ${encodeURIComponent(msg || 'No additional message')}`;
+    window.open(`https://wa.me/919425430025?text=${text}`, '_blank');
+  }
+</script>
+</body>
+</html>
